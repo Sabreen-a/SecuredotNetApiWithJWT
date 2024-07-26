@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using SecureApiJWT.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace SecureApi.Models
@@ -10,5 +11,7 @@ namespace SecureApi.Models
 
         [Required, MaxLength(30)]
         public string LastName { get; set; }
+
+        public List<RefreshToken>? RefreshTokens { get; set; }
     }
 }
